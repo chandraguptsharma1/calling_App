@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Helper/notification_service.dart';
 import '../Screens/Calling_Screen.dart';
+import '../Screens/Calling_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -71,9 +73,16 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            // Add functionality if needed
-          },
+          onPressed: showIncomingCallNotification,
+          // onPressed: () {
+          //   // Navigate to CallingScreen when button is clicked
+          //   Navigator.push(
+          //     context,
+          //     MaterialPageRoute(
+          //       builder: (context) => CallingPage(),
+          //     ),
+          //   );
+          // },
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
             shape: RoundedRectangleBorder(
